@@ -25,13 +25,23 @@ body img {
   background: rgba(255, 255, 255, 0.2);
   width: 500px;
   height: 500px;
-  padding: 3em;
+  padding: 2em;
   border-radius: 3em;
   position: relative;
   z-index: 1;
   backdrop-filter: blur(7px);
+  color: white;
 }
 
-.container p {
-  color: white;
+.title {
+  text-align: center;
+  font-size: 40px;
+}
+
+.status-reset {
+  margin-top: 15px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
