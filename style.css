@@ -21,6 +21,7 @@ body img {
 }
 
 .container {
+  margin: 50px;
   background: rgba(255, 255, 255, 0.2);
   width: 500px;
   height: 500px;
