@@ -23,8 +23,6 @@ body img {
 .container {
   margin: 50px;
   background: rgba(255, 255, 255, 0.2);
-  width: 500px;
-  height: 500px;
   padding: 2em;
   border-radius: 3em;
   position: relative;
@@ -63,4 +61,19 @@ body img {
 .reset:hover {
   background: rgba(255, 255, 255, 0.5);
   color: #ff4500;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 15px;
+  margin-top: 50px;
+}
+
+.game-cell {
+  height: 200px;
+  width: 200px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
 }
