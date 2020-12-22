@@ -6,13 +6,11 @@ const cellDivs = document.querySelectorAll(".game-cell");
 // game variables
 let gameIsLive = true;
 let xIsNext = true;
-let winner = null;
 
 // functions
 const handleWin = (letter) => {
     gameIsLive = false;
-    winner = letter;
-    statusDiv.innerHTML = `${winner} has won!`;
+    statusDiv.innerHTML = `${letter} has won!`;
 }
 
 const checkGameStatus = () => {
@@ -53,7 +51,7 @@ const checkGameStatus = () => {
 const handleReset = () => {
     xIsNext = true;
     statusDiv.innerHTML = "X is Next";
-    winner = null;
+    gameIsLive = true;
     for (const cellDiv of cellDivs) {
         cellDiv.classList.remove("x");
         cellDiv.classList.remove("o");
@@ -63,7 +61,7 @@ const handleReset = () => {
 const handleCellClick = (e) => {
     const classList = e.target.classList;
     
-    if (classList[1] === 'x' || classList[1] === 'o') {
+    if (!gameIsLive || classList[1] === 'x' || classList[1] === 'o') {
         return;
     }
     
@@ -105,4 +103,4 @@ const playerFactory = () => {
 
 }
 
-//gameBoard.createBoard();*/
+gameBoard.createBoard();*/
