@@ -4,9 +4,11 @@ A tic tac toe app for The Odin Project to experiment with js modules and factori
 
 ### To-do
 
-1. Create gameBoard as an array inside an object with a module
-1. Create displayController as a module
-1. Create players with factories
+1. Create App
+1. Media queries
+1. Change JS to factories and modules
+1. Add AI functionality
+1. Add unbeatable AI
 
 ### Issues
 
