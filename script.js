@@ -16,15 +16,15 @@ const handleWin = (letter) => {
 }
 
 const checkGameStatus = () => {
-    const topLeft = cellDivs[0].classList[2];
-    const topMiddle = cellDivs[1].classList[2];
-    const topRight = cellDivs[2].classList[2];
-    const middleLeft = cellDivs[3].classList[2];
-    const middleMiddle = cellDivs[4].classList[2];
-    const middleRight = cellDivs[5].classList[2];
-    const bottomLeft = cellDivs[6].classList[2];
-    const bottomMiddle = cellDivs[7].classList[2];
-    const bottomRight = cellDivs[8].classList[2];
+    const topLeft = cellDivs[0].classList[1];
+    const topMiddle = cellDivs[1].classList[1];
+    const topRight = cellDivs[2].classList[1];
+    const middleLeft = cellDivs[3].classList[1];
+    const middleMiddle = cellDivs[4].classList[1];
+    const middleRight = cellDivs[5].classList[1];
+    const bottomLeft = cellDivs[6].classList[1];
+    const bottomMiddle = cellDivs[7].classList[1];
+    const bottomRight = cellDivs[8].classList[1];
 
     // check winner?
     if (topLeft && topLeft === topMiddle && topLeft === topRight) {
@@ -50,15 +50,20 @@ const checkGameStatus = () => {
 };
 
 // event handlers
-const handleReset = (e) => {
-    console.log(e);
+const handleReset = () => {
+    xIsNext = true;
+    statusDiv.innerHTML = "X is Next";
+    winner = null;
+    for (const cellDiv of cellDivs) {
+        cellDiv.classList.remove("x");
+        cellDiv.classList.remove("o");
+    }
 }
 
 const handleCellClick = (e) => {
     const classList = e.target.classList;
-    const location = classList[1];
     
-    if (classList[2] === 'x' || classList[2] === 'o') {
+    if (classList[1] === 'x' || classList[1] === 'o') {
         return;
     }
     
