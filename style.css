@@ -72,8 +72,24 @@ body img {
 }
 
 .game-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 150px;
   width: 150px;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.2);
+}
+
+.x::before {
+  content: '⨉';
+  font-size: 110px;
+  color: #5b2c6f;
+}
+
+.o::before {
+  content: '◯';
+  font-size: 80px;
+  font-weight: 700;
+  color: #1f618d;
 }
