@@ -72,8 +72,8 @@ body img {
 }
 
 .game-cell {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   cursor: pointer;
   background: rgba(255, 255, 255, 0.2);
 }
